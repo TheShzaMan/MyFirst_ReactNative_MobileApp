@@ -1,13 +1,14 @@
 import React from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { CustomButton } from "./components/customButton";
 
 const HomeScreen = (navigation) => {
 	return (
-		<ScrollView style={styles.container}>
+		<View style={styles.container}>
 			<View
 				style={{
-					height: 400,
+					flex: 1,
 					borderStyle: "solid",
 					borderColor: "#00ffff",
 					borderWidth: 2,
@@ -20,7 +21,8 @@ const HomeScreen = (navigation) => {
 			</View>
 			<View
 				style={{
-					flex: 1,
+					flex: 2,
+					alignItems: "center",
 					borderStyle: "solid",
 					borderColor: "#00ffff",
 					borderWidth: 2,
@@ -32,9 +34,9 @@ const HomeScreen = (navigation) => {
 							color: "#daa520",
 							fontSize: 24,
 							backgroundColor: "#5f9ea0",
-							width: "auto",
-							minWidth: 50,
-							height: 400,
+							width: 200,
+							// minWidth: 50,
+							// height: 400,
 							textAlign: "center",
 						},
 					]}
@@ -42,7 +44,8 @@ const HomeScreen = (navigation) => {
 					by TheShza
 				</Text>
 			</View>
-		</ScrollView>
+			<CustomButton />
+		</View>
 	);
 };
 
